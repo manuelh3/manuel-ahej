@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Halant');
+/* font-family: 'Halant', serif; */
+@import url('https://fonts.googleapis.com/css?family=Paprika');
+/* font-family: 'Paprika', cursive; */
+
+#fade{
+    animation: faden 2.0s ease forwards;
+}
+
+@keyframes faden{
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+#body {
+    max-width: 100%;
+}
+
+#site-container {
+    display: grid;
+    grid-template-rows: 50px 360px repeat(2, 540px) 50px;
+    grid-template-areas: 
+        "nav"
+        "slides"
+        "personal"
+        "professional"
+        "footer";
+}
+
+#photos {
+    grid-area: slides;
+    align-self: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#photos h1{
+    font-family: 'Halant', serif; 
+    font-weight: 900;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 0em;
+}
+
+#photos p {
+    font-family: 'Paprika', cursive;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0em;
+}
+
+#slideshow {
+    grid-area: slides;
+    align-self: center;
+    justify-self: center;
+}
+
+#slideshow img {
+    border-top: 5px solid rgb(251, 188, 5);
+    height: 360px;
+    max-width: 100%;
+    border-bottom: 5px solid rgb(234, 67, 53);
+}
+
+#navbar {
+    box-sizing: border-box;
+    height: 50px;
+    align-self: center;
+    
+    border-top: 5px solid rgb(24, 112, 255);
+    background-color: rgb(66, 133, 244);
+    
+    font-family: 'Halant', serif;
+    color: white;
+    
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr 1fr;
+    grid-template-areas: 
+        "home . port cont";
+}
+
+#nav-home{
+    grid-area: home;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+#nav-port{
+    grid-area: port;
+    text-align: right;
+    margin-top: 3px;
+}
+#nav-info{
+    grid-area: cont;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+#personal {
+    background-color: rgb(251, 188, 5);
+    color: white;
+    font-family: 'Halant', serif;
+    grid-area: personal;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "bio headshot int";
+}
+
+#bio {
+    grid-area: bio;
+    margin-left: 70px;
+    text-align: center;
+    align-self: center;
+}
+
+#bio h1 {
+    font-family: 'Paprika', cursive;
+    font-weight: 900;
+}
+
+#bio p {
+    
+}
+
+#headshot {
+    grid-area: headshot;
+    align-self: center;
+    justify-self: center;
+}
+
+#headshot img {
+    height: 300px;
+    width: 300px;
+    border: 15px solid rgb(234, 67, 53);
+    border-radius: 50%;
+}
+
+#interests {
+    grid-area: int;
+    margin-right: 70px;
+    text-align: center;
+    font-family: 'Halant', serif;
+    align-self: center;
+}
+
+#interests h1 {
+    font-family: 'Paprika', cursive;
+    font-weight: 900;
+}
+
+#professional {
+    border-top: 5px solid rgb(66, 133, 244);
+    background-color: rgb(52, 168, 83);
+    grid-area: professional;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "work skills";
+    color: white;
+}
+
+#work {
+    grid-area: work;
+    font-family: 'Halant', serif;
+    text-align: center;
+    align-self: center;
+
+}
+
+#work h1 {
+    font-family: 'Paprika', cursive;
+}
+
+#skills {
+    grid-area: skills;
+    text-align: center;
+    align-self: center;
+}
+
+#skills h1 {
+    font-family: 'Paprika', cursive;
+}
+
+#footer {
+    border-top: 5px solid rgb(251, 188, 5);
+    background-color: rgb(234, 67, 53);
+    color: white;
+    text-align: center;
+}
+
+#footer p {
+    align-self: center;
+    font-family: 'Halant', serif;
+}
